@@ -1,0 +1,170 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box; cursor: default;
+}
+:root {
+  --primary-color: #EF0000;
+  --primary-color-light: #500909;
+  --primary-color-light2: #50090979;
+  --inactive-tab-color: #2b2a2a;
+}
+.App {
+  text-align: center; color: #fef; z-index: 0; background-color: #121212;
+}
+
+.container {
+  background-color: #121212;
+  z-index: 0; position: relative; margin: 0 150px;
+}
+
+
+/************* SIDEBAR *************/
+
+
+.sidebar-container {
+  position: fixed; z-index: 10; right: 0; height: 100vh; width: 150px; z-index: 100000;
+}
+.sidebar-container .sidebar {
+  position: relative; right: 0; height: 100vh; width: 150px; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 11;
+}
+.sidebar-container .sidebar .sidebar-logo {
+  height: 150px; width: 150px; position: absolute; top: 20px; object-fit: cover; cursor: pointer;
+}
+.sidebar-container .sidebar ul {
+  list-style: none; height: 50%; display: flex; justify-content: space-evenly; flex-direction: column; align-items: center; letter-spacing: 2.5px; text-align: center;
+}
+
+.sidebar-container .sidebar ul li {
+  background-color: var(--inactive-tab-color); border-radius: 50px; min-width: 50px; min-height: 50px; max-height: 50px; max-width: 50px; display: flex; align-items: center; justify-content: right; z-index: 2; position: relative; cursor: pointer;
+}
+
+.sidebar-container .sidebar ul li .display-icon {
+  position: absolute; right: 25%; display: block; cursor: pointer; transition: all 2s 1s;
+}
+.sidebar-container .sidebar ul li span {
+  background-color: var(--primary-color); height: 50px; width: fit-content; justify-content: center; align-items: center; border-radius: 50px; padding: 0 15px; display: none; cursor: pointer; transition: all 2s 1s;
+}
+
+.sidebar-container .sidebar ul li:hover span {
+  display: flex; transition: flex; transition: all 2s 1s; padding-right: 50px;
+}
+.sidebar-container .sidebar ul li.active {
+  background-color: var(--primary-color);
+}
+
+
+/************* HOME PAGE *************/
+
+
+.bg-color {
+  background-image: url("./images/binding-dark.png"); background-color: var(--primary-color); position: absolute; width: 100%; min-width: 600px; height: 100vh; z-index: 0; transform: skewX(15deg); right: 80%;
+}
+
+.home {
+  min-height: 100vh; z-index: 2; display: flex; justify-content: center; width: 100%;
+}
+.home-content {
+  position: relative; z-index: 1; display: flex; width: 100%; align-items: center; justify-content: space-evenly; 
+}
+.home-about {
+  font-size: 3rem; letter-spacing: 1.5px; text-align: center;
+}
+.small {
+  font-size: 1rem; margin-top: 50px; max-width: 600px;
+}
+.portfolio-photo {
+  position: relative; height: 90vh; margin-right: 50px; 
+}
+.home-content .btn, .about .btn {
+  border: transparent 2px solid; width: 250px; background-color: transparent; font-size: 1.4rem; border-radius: 10px; padding: 10px 20px; margin-top: 50px; transform: translate(-50%, 0); margin-left: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.home-content .btn:hover, .about .btn:hover {
+  border: var(--primary-color) 2px solid; box-shadow: 0 0 100px var(--primary-color-light), 0 0 100px var(--primary-color-light2) inset;;
+}
+
+
+/************* ABOUT PAGE *************/
+.info-container, .skill-container {
+  display: flex; flex-wrap: wrap; justify-content: center; 
+}
+.heading {
+  margin: 50px 0; font-size: 1.8rem;
+}
+.info-card {
+  width: 280px; text-align: left; margin-bottom: 18px;
+}
+.info-header {
+  color: #ffffff60; font-size: 1.1rem; letter-spacing: 2px;
+}
+.info-value {
+  letter-spacing: 0.2px; word-break: break-all;
+}
+
+.skill-card {
+  width: 130px; height: 150px; display: flex; flex-direction: column; align-items: center;
+}
+.skill-circle {
+  background-color: var(--inactive-tab-color); height: 80px; width: 80px; margin-bottom: 10px; border-radius: 50%; position: relative;
+}
+.inner-circle {
+  background-color: #121212; height: 64px; width: 64px; margin-top: 8px; margin-left: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; position: absolute; font-size: 1.3rem;
+}
+.colored-circle {
+  height: 80px; width: 80px; border-radius: 50%; position: absolute; background-color: var(--inactive-tab-color); z-index: 0;
+}
+
+a {
+  color: inherit; text-decoration: none;
+}
+
+/************* EXPERIENCE PAGE *************/
+.xp {
+  min-height: 100vh;
+}
+
+
+/************* PAGE HEADER *************/
+
+
+.page-header {
+  width: 100%; position: relative; display: flex; align-items: center; justify-content: center; height: 100px; margin: 200px 0 0;
+}
+.page-header .front-title {
+  position: absolute; font-size: 50px; text-transform: capitalize; z-index: 1;
+}
+.page-header .rear-title {
+  position: absolute; font-size: 100px; text-transform: capitalize; color: #ffffff12; z-index: 0;
+}
+
+
+
+
+.page {
+  min-height: 100vh;
+}
+.primary-color {
+  color: var(--primary-color);
+}
+.bold {
+  font-weight: 600;
+}
+.bolder {
+  font-weight: 800;
+}
+.spread {
+  letter-spacing: 8px;
+}
+.flex {
+  display: flex;
+}
+.w40 {
+  width: 40%; 
+}
+.w60 {
+  width: 60%;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
