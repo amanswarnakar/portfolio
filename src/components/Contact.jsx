@@ -35,6 +35,7 @@ const Contact = () => {
       subject: subject,
       body: body,
     };
+
     console.log(data);
     fetch(process.env.REACT_APP_API_URI, {
       method: "POST",
@@ -49,6 +50,10 @@ const Contact = () => {
       .then((data) => {
         console.log(data);
       });
+    setName("");
+    setEmail("");
+    setSubject("");
+    setBody("");
   };
   return (
     <div id="contact" className="contact page">
@@ -118,6 +123,7 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
+              value={name}
               placeholder="Your name"
               required
               autoComplete="off"
@@ -128,6 +134,7 @@ const Contact = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
               placeholder="Your email"
               required
               autoComplete="off"
@@ -138,6 +145,7 @@ const Contact = () => {
               type="text"
               name="subject"
               id="subject"
+              value={subject}
               placeholder="Your subject"
               required
               autoComplete="off"
@@ -148,6 +156,7 @@ const Contact = () => {
               type="text"
               name="body"
               id="body"
+              value={body}
               placeholder="Your message"
               required
               autoComplete="off"
