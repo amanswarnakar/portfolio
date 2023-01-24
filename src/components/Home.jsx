@@ -12,7 +12,7 @@ const Home = (props) => {
           <img className="portfolio-photo" src={Portfolio_Photo} alt="" />
           <div className="home-about">
             <div className="primary-color bold">Hi! I'm Aman Swarnakar.</div>
-            <div className="bolder spread">REACT DEVELOPER</div>
+            <div className="bolder more-spread">REACT DEVELOPER</div>
             <div className="small">
               I am a front-end developer from Pune. Focused on crafting clean &
               user-friendly experiences, I am passionate about building

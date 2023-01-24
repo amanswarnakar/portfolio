@@ -8,7 +8,7 @@
   --inactive-tab-color: #2b2a2a;
 }
 .App {
-  text-align: center; color: #fef; z-index: 0; background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;  text-align: center; color: #fef; z-index: 0; background-color: #121212; 
 }
 
 .container {
@@ -45,7 +45,7 @@
 }
 
 .sidebar-container .sidebar ul li:hover span {
-  display: flex; transition: flex; transition: all 2s 1s; padding-right: 50px;
+  display: flex; transition: flex; transition: all 2s 1s; padding-right: 50px; padding-left: 25px;
 }
 .sidebar-container .sidebar ul li.active {
   background-color: var(--primary-color);
@@ -78,13 +78,13 @@
   border: transparent 2px solid; width: 250px; background-color: transparent; font-size: 1.4rem; border-radius: 10px; padding: 10px 20px; margin-top: 50px; transform: translate(-50%, 0); margin-left: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;
 }
 .home-content .btn:hover, .about .btn:hover {
-  border: var(--primary-color) 2px solid; box-shadow: 0 0 100px var(--primary-color-light), 0 0 100px var(--primary-color-light2) inset;;
+  border: var(--primary-color) 2px solid; box-shadow: 0 0 100px var(--primary-color-light), 0 0 100px var(--primary-color-light2) inset;
 }
 
 
 /************* ABOUT PAGE *************/
 .info-container, .skill-container {
-  display: flex; flex-wrap: wrap; justify-content: center; 
+  display: flex; flex-wrap: wrap; justify-content: center; word-break: break-all;
 }
 .heading {
   margin: 50px 0; font-size: 1.8rem;
@@ -100,16 +100,16 @@
 }
 
 .skill-card {
-  width: 130px; height: 150px; display: flex; flex-direction: column; align-items: center;
+  width: 150px; height: 150px; display: flex; flex-direction: column; align-items: center; 
 }
 .skill-circle {
-  background-color: var(--inactive-tab-color); height: 80px; width: 80px; margin-bottom: 10px; border-radius: 50%; position: relative;
+  background-color: var(--inactive-tab-color); height: 125px; width: 125px; margin-bottom: 10px; border-radius: 50%; position: relative;
 }
 .inner-circle {
-  background-color: #121212; height: 64px; width: 64px; margin-top: 8px; margin-left: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; position: absolute; font-size: 1.3rem;
+  background-color: #121212; height: 105px; width: 105px; margin-top: 10px; margin-left: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; position: absolute; font-size: 1.3rem;
 }
 .colored-circle {
-  height: 80px; width: 80px; border-radius: 50%; position: absolute; background-color: var(--inactive-tab-color); z-index: 0;
+  height: 125px; width: 125px; border-radius: 50%; position: absolute; background-color: var(--inactive-tab-color); z-index: 0;
 }
 
 a {
@@ -117,8 +117,129 @@ a {
 }
 
 /************* EXPERIENCE PAGE *************/
-.xp {
-  min-height: 100vh;
+#xp {
+  min-height: 80vh;
+}
+.work-xp-container, .projects-container {
+  display: flex; width: 100%; height: 100%; justify-content: center; flex-wrap: wrap; margin-top: 50px;
+}
+
+.work-card {
+  height: fit-content; margin: 50px 20px 25px 50px; width: 400px; position: relative; border-left: var(--inactive-tab-color) 4px dashed; 
+}
+.work-card .time-duration {
+  height: 35px;
+}
+.work-card .time-duration .time-duration-chip {
+  background: var(--inactive-tab-color); padding: 7px 15px; border-radius: 50px; position: relative; top: 7px; font-size: 0.8rem;
+}
+.work-card .name {
+  font-size: 2rem; width: calc(100% - 40px); margin: 0 auto; cursor: pointer; line-height: 2rem; margin: 20px;
+}
+.work-card .circle {
+  height: 50px; width: 50px; background: var(--primary-color); border-radius: 50%; position: absolute; transform: translate(-50%, 0); display: flex; align-items: center; justify-content: center;
+}
+.work-card .company-name {
+  margin-bottom: 12px; font-size: 1.1rem;
+}
+.work-card .details {
+  width: 80%; text-align: center; margin: 0 auto; font-size: 0.9rem;
+}
+
+
+/************* EDUCATION PAGE *************/
+.edu-container {
+  display: flex; width: 100%; height: 100%; justify-content: center; flex-wrap: wrap; margin-top: 50px;
+}
+.edu-card {
+  height: fit-content; margin: 50px 0px 25px 50px; width: 400px; position: relative; border-left: var(--inactive-tab-color) 4px dashed; 
+}
+.edu-card .time-duration {
+  height: 35px;
+}
+.edu-card .time-duration .time-duration-chip {
+  background: var(--inactive-tab-color); padding: 7px 15px; border-radius: 50px; position: relative; top: 7px; font-size: 0.8rem;
+}
+.edu-card .name {
+  font-size: 1.5rem; width: calc(100% - 40px); margin: 0 auto; cursor: pointer; line-height: 2rem; margin: 20px;
+}
+.edu-card .circle {
+  height: 50px; width: 50px; background: var(--primary-color); border-radius: 50%; position: absolute; transform: translate(-50%, 0); display: flex; align-items: center; justify-content: center;
+}
+.edu-card .company-name {
+  margin-bottom: 12px; font-size: 1.1rem;
+}
+.edu-card .details {
+  width: 80%; text-align: center; margin: 0 auto; font-size: 0.9rem;
+}
+
+/************* CONTACT PAGE *************/
+.contact-container {
+  display: flex; width: 100%; height: 100%; justify-content: space-between; flex-wrap: wrap; margin-top: 50px;  
+}
+.contact-container .left a {
+  cursor: pointer;
+}
+.contact-container h3 {
+  padding: 0 50px 25px 50px;
+}
+.contact-container .left {
+  width: fit-content;
+}
+.contact-container .left .contacts {
+  display: flex; flex-direction: column;  text-align: left; 
+}
+.contact-container .left .contacts .contact {
+  display: flex; margin: 20px 0; align-items: center;
+}
+.contact-container .left .contacts .contact .contact-icon.MuiSvgIcon-root {
+  min-height: 50px; width: 50px; margin-right: 15px;
+}
+.contact-container .left .contacts .contact h4 {
+  margin-bottom: 5px;
+}
+.contact-container .left .contacts .contact p {
+  font-size: 1rem;
+}
+.contact-container .footers {
+  margin: 20px; height: fit-content;
+}
+.contact-container .footers .MuiSvgIcon-root {
+  height: 40px; width: 40px; margin: 0 15px;
+}
+.contact-container .right {
+  width: calc(100% - 375px);
+}
+.form .contact-input {
+  margin: 10px 20px; height: 50px; padding: 5px 10px; font-size: 1rem; background: transparent; color: #fef; border: 2px solid var(--primary-color-light); border-radius: 10px; box-shadow: 0 0 25px var(--primary-color-light2);
+}
+.form .contact-input:focus {
+  border: 2px solid var(--primary-color);
+}
+.form .contact-input::placeholder {
+  color: #fef; text-align: center; text-transform: uppercase;
+}
+.contact-container .right .submit-btn {
+  display: flex; align-items: center; justify-content: space-evenly; height: 50px; width: 150px; margin: 0 auto; border-radius: 10px; text-transform: uppercase; border: transparent 2px solid; padding: 0px 20px;
+}
+.contact-container .right .submit-btn:hover {
+  border: var(--primary-color) 2px solid; box-shadow: 0 0 100px var(--primary-color-light), 0 0 40px var(--primary-color-light2) inset;
+}
+
+.large-input {
+  min-height: 200px; height: fit-content;
+}
+.large-input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/************* PAGE HEADER *************/
+.footer {
+  padding: 50px 0; 
 }
 
 
@@ -150,7 +271,13 @@ a {
 .bolder {
   font-weight: 800;
 }
+.less-spread {
+  letter-spacing: 2px;
+}
 .spread {
+  letter-spacing: 4px;
+}
+.more-spread {
   letter-spacing: 8px;
 }
 .flex {
@@ -162,6 +289,8 @@ a {
 .w60 {
   width: 60%;
 }
+.w50 {width: calc(50% - 40px);}
+.w100 {width: calc(100% - 40px);}
 .text-left {
   text-align: left;
 }

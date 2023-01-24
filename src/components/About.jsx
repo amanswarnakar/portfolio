@@ -39,6 +39,10 @@ const About = () => {
       value: 90,
     },
     {
+      title: "ReactJS",
+      value: 80,
+    },
+    {
       title: "HTML",
       value: 75,
     },
@@ -47,15 +51,11 @@ const About = () => {
       value: 75,
     },
     {
-      title: "ReactJS",
-      value: 80,
-    },
-    {
       title: "NodeJS",
       value: 60,
     },
     {
-      title: "MySQl",
+      title: "MySQL ",
       value: 75,
     },
     {
@@ -93,10 +93,10 @@ const About = () => {
     return (
       <div className="skill-card">
         <div className="skill-circle">
-          <div className="inner-circle bold">{value}%</div>
+          <div className="inner-circle bold">{title}</div>
           <div style={customStyle} className="colored-circle"></div>
         </div>
-        <div className="skill-title bold">{title}</div>
+        {/* <div className="skill-title bold">{title}</div> */}
       </div>
     );
   };
@@ -133,7 +133,7 @@ const About = () => {
               );
             })}
           </div>
-          <div onClick={onButtonClick} className="btn bold">
+          <div target="_blank" href="" className="btn bold">
             Download CV
           </div>
         </div>
