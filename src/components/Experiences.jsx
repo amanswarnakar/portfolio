@@ -3,8 +3,6 @@ import PageHeader from "./PageHeader";
 import WorkIcon from "@mui/icons-material/Work";
 
 const Experiences = (props) => {
-  let job1join = new Date("01-02-2022");
-
   const works = [
     {
       id: 1,
@@ -46,7 +44,7 @@ const Experiences = (props) => {
               details.endDate.toLocaleDateString("en-US", { year: "2-digit" })}
           </span>
         </div>
-        <a target="_blank" href={details.link}>
+        <a target="_blank" rel="noreferrer" href={details.link}>
           <div className="name less-spread bolder">{details.title}</div>
         </a>
         <div className="company-name bold">{details.company}</div>
@@ -136,7 +134,7 @@ const Experiences = (props) => {
               details.endDate.toLocaleDateString("en-US", { year: "2-digit" })}
           </span>
         </div>
-        <a target="_blank" href={details.link}>
+        <a target="_blank" rel="noreferrer" href={details.link}>
           <div className="name less-spread bolder">{details.title}</div>
         </a>
         <div className="details">{details.details}</div>

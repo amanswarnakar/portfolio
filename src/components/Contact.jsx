@@ -103,6 +103,7 @@ const Contact = (props) => {
             <div className="footers">
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.linkedin.com/in/amanswarnakar/"
                 className="icon"
               >
@@ -110,6 +111,7 @@ const Contact = (props) => {
               </a>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.github.com/amanswarnakar"
                 className="icon"
               >

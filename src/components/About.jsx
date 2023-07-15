@@ -102,7 +102,6 @@ const About = (props) => {
           <div className="inner-circle bold">{title}</div>
           <div style={customStyle} className="colored-circle"></div>
         </div>
-        {/* <div className="skill-title bold">{title}</div> */}
       </div>
     );
   };
@@ -140,13 +139,7 @@ const About = (props) => {
                 );
               })}
             </div>
-            <div
-              target="_blank"
-              rel="noreferrer"
-              href=""
-              className="btn bold"
-              onClick={onButtonClick}
-            >
+            <div className="btn bold" onClick={onButtonClick}>
               Download CV
             </div>
           </div>
