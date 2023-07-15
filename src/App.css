@@ -33,21 +33,21 @@
   list-style: none; height: 50%; display: flex; justify-content: space-evenly; flex-direction: column; align-items: center; letter-spacing: 2.5px; text-align: center;
 }
 
-.sidebar-container .sidebar ul li {
+.sidebar-container .sidebar ul a {
   background-color: var(--inactive-tab-color); border-radius: 50px; min-width: 50px; min-height: 50px; max-height: 50px; max-width: 50px; display: flex; align-items: center; justify-content: right; z-index: 2; position: relative; cursor: pointer;
 }
 
-.sidebar-container .sidebar ul li .display-icon {
+.sidebar-container .sidebar ul a .display-icon {
   position: absolute; right: 25%; display: block; cursor: pointer; transition: all 2s 1s;
 }
-.sidebar-container .sidebar ul li span {
+.sidebar-container .sidebar ul a span {
   background-color: var(--primary-color); height: 50px; width: fit-content; justify-content: center; align-items: center; border-radius: 50px; padding: 0 15px; display: none; cursor: pointer; transition: all 2s 1s;
 }
 
-.sidebar-container .sidebar ul li:hover span {
+.sidebar-container .sidebar ul a:hover span {
   display: flex; transition: flex; transition: all 2s 1s; padding-right: 50px; padding-left: 25px;
 }
-.sidebar-container .sidebar ul li.active {
+.sidebar-container .sidebar ul a.active {
   background-color: var(--primary-color);
 }
 
@@ -90,7 +90,7 @@
   margin: 50px 0; font-size: 1.8rem;
 }
 .info-card {
-  width: 280px; text-align: left; margin-bottom: 18px;
+  width: 280px; text-align: left; margin-bottom: 25px;
 }
 .info-header {
   color: #ffffff60; font-size: 1.1rem; letter-spacing: 2px;
@@ -103,13 +103,13 @@
   width: 150px; height: 150px; display: flex; flex-direction: column; align-items: center; 
 }
 .skill-circle {
-  background-color: var(--inactive-tab-color); height: 125px; width: 125px; margin-bottom: 10px; border-radius: 50%; position: relative;
+  background-color: var(--inactive-tab-color); height: 115px; width: 115px; margin-bottom: 10px; border-radius: 50%; position: relative;
 }
 .inner-circle {
-  background-color: #121212; height: 105px; width: 105px; margin-top: 10px; margin-left: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; position: absolute; font-size: 1.3rem;
+  background-color: #121212; height: 95px; width: 95px; margin-top: 10px; margin-left: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; position: absolute; font-size: 1rem;
 }
 .colored-circle {
-  height: 125px; width: 125px; border-radius: 50%; position: absolute; background-color: var(--inactive-tab-color); z-index: 0;
+  height: 115px; width: 115px; border-radius: 50%; position: absolute; background-color: var(--inactive-tab-color); z-index: 0;
 }
 
 a {
@@ -236,13 +236,6 @@ a {
 
 
 
-
-/************* PAGE HEADER *************/
-.footer {
-  padding: 50px 0; 
-}
-
-
 /************* PAGE HEADER *************/
 
 
@@ -257,6 +250,16 @@ a {
 }
 
 
+
+/************* FOOTER *************/
+.footer {
+  padding: 50px 0; 
+}
+
+
+
+
+/************* UTILITIES *************/
 
 
 .page {

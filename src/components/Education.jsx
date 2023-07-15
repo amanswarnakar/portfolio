@@ -1,7 +1,7 @@
 import React from "react";
 import PageHeader from "./PageHeader";
 import School from "@mui/icons-material/School";
-const Education = () => {
+const Education = (props) => {
   const Edu = [
     {
       id: 1,
@@ -56,7 +56,7 @@ const Education = () => {
   };
 
   return (
-    <div>
+    <section id="education-page">
       <div id="edu" className="edu page">
         <PageHeader frontTitle="EDUCATION" rearTitle="EDUCATION" />
 
@@ -70,7 +70,7 @@ const Education = () => {
       Education
     */}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,37 +1,44 @@
-import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
 // import CustomCursor from "./components/CustomCursor/CustomCursor.jsx";
 import Education from "./components/Education";
 import Experiences from "./components/Experiences";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-  const [selected, setSelected] = useState(1);
+  let sections = document.querySelectorAll("section");
+  let navLinks = document.querySelectorAll(".sidebar ul a");
+
+  window.onscroll = () => {
+    sections.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+      if (top >= offset && top < offset + height) {
+        console.log(id);
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
+        let curr = document.getElementById(id);
+        curr.classList.add("active");
+      }
+    });
+  };
 
   return (
     <div className="App">
-      <Sidebar selected={selected} setSelected={setSelected} />
+      <Sidebar />
       {/* <CustomCursor /> */}
       <div className="container">
-        {/* <Routes>
-            <Route path="/" exact index element={<Home />} />
-            <Route path="/home" exact index element={<Home />} />
-            <Route path="/about" exact index element={<About />} />
-            <Route path="/xp" exact index element={<Experiences />} />
-            <Route path="/edu" exact index element={<Education />} />
-            <Route path="/contact" exact index element={<Contact />} />
-          </Routes> */}
-        <Home setSelected={setSelected} />
+        <Home />
         <About />
         <Experiences />
         <Education />
         <Contact />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
